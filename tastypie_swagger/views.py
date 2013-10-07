@@ -28,7 +28,7 @@ class TastypieApiMixin(object):
             raise ImproperlyConfigured("%s is not a valid python path" % path)
         if not tastypie_api:
             raise ImproperlyConfigured("%s is not a valid tastypie.api.Api instance" % tastypie_api_module)
-        self.tastypie_api = tastypie_api
+        self.tastypie_api = tastypie_api.api
 
 
 class SwaggerApiDataMixin(object):
