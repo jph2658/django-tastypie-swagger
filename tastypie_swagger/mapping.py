@@ -72,7 +72,7 @@ class ResourceSwaggerMapping(object):
         if hasattr(self.resource, 'get_resource_list_uri'):
             return self.resource.get_resource_list_uri()
         elif hasattr(self.resource, 'get_resource_uri'):
-            return self.resource.get_resource_uri()
+            return self.resource.get_resource_uri(bundle_or_obj=None)
         else:
             raise AttributeError('Resource %(resource)s has neither get_resource_list_uri nor get_resource_uri' % {'resource': self.resource})
 
